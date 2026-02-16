@@ -1,0 +1,109 @@
+/* 首页/个人中心 - 用户头像样式 */
+.home img{
+    width: 150px;          /* 头像宽度：固定尺寸保证圆形比例 */
+    height: 150px;         /* 头像高度：宽高一致才能通过border-radius实现正圆形 */
+    border-radius: 50%;    /* 圆角50%：将方形图片转为圆形头像（后台用户头像经典样式） */
+    margin-right: 40px;    /* 头像右侧间距：与右侧用户名/登录信息拉开视觉距离 */
+}
+
+/* 首页/个人中心 - 用户名样式 */
+.home .name{
+    font-size: 32px;       /* 用户名字体大小：突出显示，层级高于辅助信息 */
+    margin-bottom: 10px;   /* 用户名下方间距：与下方登录信息分隔，提升可读性 */
+}
+
+/* 首页/个人中心 - 用户信息容器样式（头像+文字整体） */
+.home .user{
+    display: flex;         /* Flex布局：让头像（块级）和文字水平排列 */
+    align-items: center;   /* 垂直居中对齐：保证头像和文字在同一行居中显示 */
+    margin-bottom: 20px;   /* 容器下方间距：与下方数据卡片模块分隔 */
+    border-bottom: 1px solid #ccc; /* 底部灰色分隔线：视觉上区分用户信息和数据统计模块 */
+    padding-bottom: 20px;  /* 补充：分隔线内边距，避免文字紧贴分隔线 */
+}
+
+/* 首页/个人中心 - 登录信息文本容器样式 */
+.home .login-info p{
+    line-height: 20px;     /* 文本行高：优化单行文字的垂直居中 */
+    font-size: 14px;       /* 登录信息字体大小：辅助文字，小于用户名 */
+    color: #999999;        /* 登录信息标签颜色：浅灰色（#999），弱化标签视觉层级 */
+    margin: 8px 0;         /* 补充：上下间距，优化多行登录信息的行间距 */
+}
+
+/* 首页/个人中心 - 登录信息文本中的值样式 */
+.home .login-info p span{
+    color: #666666;        /* 登录信息值颜色：中灰色（#666），比标签深，突出核心信息 */
+    margin-left: 60px;     /* 与左侧标签间距：统一对齐，提升排版整洁度 */
+    display: inline-block; /* 补充：inline元素默认不识别margin，转为inline-block确保间距生效 */
+}
+
+/* -------------------------- 数据统计数字卡片模块 -------------------------- */
+/* 首页 - 数据统计卡片容器样式 */
+.home .num{
+    display: flex;         /* Flex布局：卡片水平排列 */
+    flex-wrap: wrap;       /* 自动换行：屏幕缩小时卡片自动换行，适配响应式 */
+    justify-content: space-between; /* 两端对齐：卡片之间间距均匀分布 */
+}
+
+/* 首页 - 单个数据卡片基础样式（AntD Card组件） */
+.home .num .ant-card{
+    width: 33%;            /* 卡片宽度：一行显示3个卡片（100%/3 ≈ 33%） */
+    margin-bottom: 16px;   /* 补充：卡片下方间距，换行后避免紧贴 */
+}
+
+/* 首页 - 数据卡片内容区域样式（AntD Card Body） */
+.home .num .ant-card-body{
+    display: flex;         /* Flex布局：图标区+数字区水平排列 */
+    padding: 10px 25px;    /* 内边距：调整卡片内部上下/左右间距，优化视觉 */
+}
+
+/* 首页 - 数据卡片左侧图标盒子样式 */
+.home .num .icon-box{
+    width: 80px;           /* 图标盒子宽度：固定尺寸保证圆形/方形图标区 */
+    height: 80px;          /* 图标盒子高度：宽高一致，适配图标居中 */
+    text-align: center;    /* 水平居中：图标在盒子内水平居中 */
+    line-height: 85px;     /* 行高略大于高度：微调图标垂直居中（视觉优化） */
+    color: aliceblue;      /* 图标颜色：白色系，适配深色背景 */
+    border-top-left-radius: 5px;    /* 左上圆角：美化图标盒子边角 */
+    border-bottom-left-radius: 5px; /* 左下圆角：与左上圆角配合，形成半圆角 */
+}
+
+/* 首页 - 图标盒子内的图标样式（i标签） */
+.home .num .icon-box i{
+    font-size: 30px;       /* 图标大小：突出显示，提升视觉冲击力 */
+}
+
+/* 首页 - 数据卡片数字信息容器样式 */
+.home .num .num-info{
+    flex: 1;               /* 弹性占满剩余空间：适配不同宽度的卡片 */
+    padding: 10px 0;       /* 上下内边距：优化数字信息的垂直间距 */
+    text-align: center;    /* 水平居中：数字/文字在容器内居中 */
+}
+
+/* 首页 - AntD图标全局样式（覆盖AntD默认样式） */
+.home .anticon{
+    font-size: 30px;       /* 统一AntD图标大小：与自定义i标签图标尺寸一致 */
+}
+
+/* 首页 - 数据卡片右侧详情区域样式 */
+.home .num .detail{
+   margin-left: 15px;      /* 与左侧图标区间距：分隔图标和数字，提升可读性 */
+}
+
+/* 首页 - 数据卡片核心数字样式 */
+.home .num .detail .num{
+    font-size: 30px;       /* 数字大小：突出核心数据，视觉层级最高 */
+    margin-bottom: 10px;   /* 数字下方间距：与下方文字分隔 */
+    font-weight: 600;      /* 补充：加粗数字，进一步突出核心数据（原代码未加，建议补充） */
+}
+
+/* 首页 - 数据卡片文字说明样式 */
+.home .num .detail .txt{
+    font-size: 14px;       /* 文字大小：辅助说明，小于数字 */
+    text-align: center;    /* 水平居中：与数字对齐，提升排版整洁度 */
+    color: #999999;        /* 文字颜色：浅灰色，弱化辅助信息 */
+}
+
+.home .graph{
+    margin-top: 20px;      /* 与数据卡片间距：提升视觉层级 */
+    display: flex;
+}
