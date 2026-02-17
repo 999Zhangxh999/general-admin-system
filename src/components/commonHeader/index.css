@@ -1,3 +1,4 @@
+/* src\components\commonHeader\index.css */
 .header-container {
     display: flex; /* 使用 Flexbox 布局 */
     justify-content: space-between; /* 子元素之间的间距平均分布，两端对齐 */

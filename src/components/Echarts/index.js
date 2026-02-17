@@ -1,3 +1,4 @@
+// src\components\Echarts\index.js
 import React, { useEffect, useRef } from "react"
 import * as echarts from "echarts"
 

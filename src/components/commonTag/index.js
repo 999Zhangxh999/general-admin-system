@@ -1,3 +1,4 @@
+// src\components\commonTag\index.js
 import React from "antd"
 import { Tag, Space } from "antd"
 import { useSelector ,useDispatch} from "react-redux"
